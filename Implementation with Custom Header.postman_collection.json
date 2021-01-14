@@ -1,0 +1,201 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Implementation with Custom Header",
+		"_postman_id": "552d8194-6f1c-d6ac-2b8d-e65510ed5af4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request for Question",
+			"request": {
+				"url": "http://localhost:8080/question",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "sending the correct resonse with question",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/validate?inputQuestion=Here you go, solve the question: Please sum the numbers 592,607,658&sum=1857",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"validate"
+					],
+					"query": [
+						{
+							"key": "inputQuestion",
+							"value": "Here you go, solve the question: Please sum the numbers 592,607,658",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sum",
+							"value": "1857",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "number-game-id",
+						"value": "0",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Response wrong",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/validate?inputQuestion=Here you go, solve the question: Please sum the numbers 592,607,658&sum=1856",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"validate"
+					],
+					"query": [
+						{
+							"key": "inputQuestion",
+							"value": "Here you go, solve the question: Please sum the numbers 592,607,658",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sum",
+							"value": "1856",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "number-game-id",
+						"value": "0",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "question tampered",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/validate?inputQuestion=Here you go, solve the question: Please tampered sum the numbers 592,607,658&sum=1856",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"validate"
+					],
+					"query": [
+						{
+							"key": "inputQuestion",
+							"value": "Here you go, solve the question: Please tampered sum the numbers 592,607,658",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sum",
+							"value": "1856",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "number-game-id",
+						"value": "0",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "wrong header",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/validate?inputQuestion=Here you go, solve the question: Please sum the numbers 592,607,658&sum=1857",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"validate"
+					],
+					"query": [
+						{
+							"key": "inputQuestion",
+							"value": "Here you go, solve the question: Please sum the numbers 592,607,658",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sum",
+							"value": "1857",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "number-game-id",
+						"value": "1",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "New Request for Question",
+			"request": {
+				"url": " http://localhost:8080/question",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
